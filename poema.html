@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poema</title>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('7971.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  text-align: center;
+  color: rgb(255, 255, 255); 
+  font-family: Ink Free;
+}
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  animation: beat 1s infinite alternate ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height:100px;
+  background: red;
+  border-radius: 100px 100px 0 0;
+  z-index: -1;
+}
+
+.heart::before {
+  left: 50px;
+  box-shadow: -25px 50px 150px 150px #ff4757;
+}
+
+.heart::after {
+  top: 50px;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.heart .bottom {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background: red;
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%, 100% 100%);
+}
+
+@keyframes beat {
+  to {
+    transform: rotate(45deg) scale(1.05);
+  }
+}
+
+.poem {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+</head>
+<body>    
+  <div class="heart-container">
+    <div class="heart">
+      <div class="bottom"></div>
+    </div>
+  </div>
+  <div class="poem">
+    <p>Nunca olvidaré ese lunes en el que me pediste mi Instagram, porque gracias a eso hoy nos conocemos.</p>
+    <p>Quiero decirte que, aunque llevamos relativamente poco tiempo de conocernos, te has vuelto una persona muy importante para mí.</p>
+    <p>Me encanta el hecho de que coincidamos en muchas cosas; gracias a eso, creo que tendremos mucho de qué hablar.</p>
+    <p>Me encanta el hecho de que hablemos desde temprano y sigamos hasta la noche.</p>
+    <p>Simplemente amo verte, aunque sea por 5 minutos,el hablar contigo y abrazarte.</p>
+    <p>Siento que no puedo pasar un día sin querer hablar contigo o verte.</p>
+    <p>Agradezco el que no hayamos conocido y seamos amigos pero</p>
+    <p>De verdad, lo agradezco demasiado.</p>
+    <p>Y por eso, quiero decirte que...</p>
+    <p>TE QUIERO MUCHO, DEMASIADO.</p>
+  </div>
+</body>
+</html>
