@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corazon Animado</title>
+</head>
+<body>    
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('100-fondos-de-pantalla-de-tumblr-para-tu-movil-o-celular-1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  text-align: center;
+  color: rgb(255, 255, 255); 
+  font-family: Ink Free;
+}
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  animation: beat 1s infinite alternate ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height:100px;
+  background: red;
+  border-radius: 100px 100px 0 0;
+  z-index: -1;
+}
+
+.heart::before {
+  left: 50px;
+  box-shadow:-25px 50px 150px 150px #ff4757;
+}
+
+.heart::after {
+  top: 50px;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.heart .bottom {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background: red;
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%, 100% 100%);
+}
+
+@keyframes beat {
+  to {
+    transform: rotate(45deg) scale(1.05);
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 10px;
+}
+overlay-text {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+}
+</style>
+</head>
+<body>   
+  <h1 style="text-shadow: 10px 10px 10px black;">TE QUIERO MUCHO,</h1>
+  <h1 style="text-shadow: 10px 10px 10px black;">DEMASIADO.</h1>
+  <div class="heart-container">
+    <div class="heart">
+      <div class="bottom"></div>
+    </div>
+  </div>
+  <button onclick="location.href='poema.html'" style="padding: 10px 20px; font-size: 16px;">Quiero decirte algo.</button>
+</body>
+</html> 
